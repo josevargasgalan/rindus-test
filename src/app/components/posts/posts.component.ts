@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from './models';
 import { PostsService } from './posts.service';
 
 @Component({
@@ -8,10 +9,14 @@ import { PostsService } from './posts.service';
 })
 export class PostsComponent implements OnInit {
 
+  posts: Post[] = [];
+
   constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
-    this.postsService.getPosts().subscribe(res => console.log(res))
+    this.postsService.getPosts().subscribe(posts => {
+      this.posts = posts
+    })
   }
 
 }

@@ -9,7 +9,7 @@ export class PostsService {
   constructor(private apiSevice: ApiService) {
 
   }
-  getPosts(): Observable<Post> {
+  getPosts(): Observable<Post[]> {
     return this.apiSevice.get('posts');
   }
 }
