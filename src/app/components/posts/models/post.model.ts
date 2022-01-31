@@ -2,5 +2,8 @@ export interface Post {
   id: number,
   title: string,
   userId: number,
-  body: string
+  body: string,
+  photo?: string
 }
+
+export type PhotoUrl = string;
