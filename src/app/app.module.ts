@@ -5,6 +5,7 @@ import { ApiService } from 'src/api/api.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponentModule } from './components/posts/posts.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PostsComponentModule } from './components/posts/posts.module';
     BrowserModule,
     AppRoutingModule,
     PostsComponentModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
