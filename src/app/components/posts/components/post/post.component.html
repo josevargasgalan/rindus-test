@@ -1,14 +1,16 @@
 <mat-card class="card">
-  <mat-card-header>
-    <div mat-card-avatar class="header-image"></div>
-    <mat-card-title>{{post.title}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image [src]="getPhotoUrl()" alt="Post Photo">
-  <mat-card-content>
-    <p>{{post.body}}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="warn" (click)="onDelete()">{{'delete' | uppercase}}</button>
-    <button mat-button>{{'show comments '| uppercase}}</button>
-  </mat-card-actions>
+  <div class="card-container">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>{{post.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="getPhotoUrl()" alt="Post Photo">
+    <mat-card-content>
+      <p>{{post.body}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="onDelete()">{{'delete' | uppercase}}</button>
+      <button mat-button>{{'show comments '| uppercase}}</button>
+    </mat-card-actions>
+  </div>
 </mat-card>

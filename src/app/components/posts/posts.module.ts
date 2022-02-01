@@ -5,13 +5,18 @@ import { PostsComponent } from './posts.component';
 import { PostsService } from './posts.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ModalsService } from '../modals';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
-    PostsComponent, PostComponent
+    PostsComponent,
+    PostComponent
   ],
-  imports: [CommonModule, MatCardModule, MatButtonModule],
-  providers: [PostsService],
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule],
+  providers: [PostsService, ModalsService],
   exports: [PostsComponent]
 })
 export class PostsComponentModule { }

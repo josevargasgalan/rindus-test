@@ -1,3 +1,16 @@
+
+<div class="posts-header">
+  <button mat-fab color="accent" (click)="onAddPost()" aria-label="Example icon button with a delete icon">
+    <mat-icon>add</mat-icon>
+    </button>
+</div>
+
 <div class="posts-container">
+        <mat-progress-spinner
+        *ngIf="posts.length === 0"
+        [color]="spinnerConfig.color"
+        [mode]="spinnerConfig.mode"
+        [value]="spinnerConfig.value">
+      </mat-progress-spinner>
       <app-post *ngFor="let post of posts" [post]="post" (onDelete)="onDeletePost($event)"></app-post>
 </div>

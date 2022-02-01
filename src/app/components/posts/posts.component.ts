@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from './models';
+import { ModalsService } from '../modals';
+import { Post, SpinnerConfig } from './models';
 import { PostsService } from './posts.service';
 
 @Component({
@@ -10,8 +11,9 @@ import { PostsService } from './posts.service';
 export class PostsComponent implements OnInit {
 
   posts: Post[] = [];
+  spinnerConfig = SpinnerConfig;
 
-  constructor(private postsService: PostsService) { }
+  constructor(private postsService: PostsService, private modalsService: ModalsService) { }
 
   ngOnInit(): void {
     this.postsService.getPosts().subscribe(posts => {
@@ -25,4 +27,9 @@ export class PostsComponent implements OnInit {
     });
   }
 
+  onAddPost() {
+    this.modalsService.openPostModal().subscribe(post => {
+
+    })
+  }
 }
