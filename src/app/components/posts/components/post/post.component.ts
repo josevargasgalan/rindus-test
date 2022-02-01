@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PhotoUrl, Post } from '../../models';
 
 @Component({
@@ -14,9 +14,15 @@ export class PostComponent implements OnInit {
     body: ''
   };
 
+  @Output('onDelete') onDeleteEmmiter: EventEmitter<Post> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {}
+
+  onDelete() {
+    this.onDeleteEmmiter.emit(this.post);
+  }
 
   getPhotoUrl(): PhotoUrl {
     return this.post.photo ?? 'assets/png/no-photo.png';

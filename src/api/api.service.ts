@@ -11,4 +11,16 @@ export class ApiService {
   get(url: string): Observable<any>{
     return this.httpService.get(`${this.baseUrl}/${url}`)
   }
+
+  post(url: string): Observable<any>{
+    return this.httpService.get(`${this.baseUrl}/${url}`)
+  }
+
+  update(url: string): Observable<any>{
+    return this.httpService.get(`${this.baseUrl}/${url}`)
+  }
+
+  delete(url: string): Observable<any>{
+    return this.httpService.get(`${this.baseUrl}/${url}`)
+  }
 }
