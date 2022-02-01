@@ -6,17 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponentModule } from './components/posts/posts.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuComponentModule } from './components/menu/menu.module';
+import { AlbumsComponentModule } from './components/albums/albums.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PostsComponentModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MenuComponentModule,
+    AlbumsComponentModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
