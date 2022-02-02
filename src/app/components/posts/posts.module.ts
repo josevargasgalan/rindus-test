@@ -10,14 +10,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ModalsService } from '../modals';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
+import { PostCommentsComponent } from './components/post/components/post-comments/post-comments.component';
+import { CommentsService } from './comments.service';
 
 @NgModule({
   declarations: [
     PostsComponent,
     PostComponent,
+    PostCommentsComponent,
   ],
   imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule, MatMenuModule],
-  providers: [PostsService, ModalsService],
+  providers: [PostsService, ModalsService, CommentsService],
   exports: [PostsComponent]
 })
 export class PostsComponentModule { }

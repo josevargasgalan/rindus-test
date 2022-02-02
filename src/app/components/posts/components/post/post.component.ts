@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { PhotoUrl, Post } from '../../models';
+import { Post } from '../../models';
 
 @Component({
   selector: 'app-post',
@@ -22,10 +22,6 @@ export class PostComponent implements OnInit {
 
   onDelete() {
     this.onDeleteEmmiter.emit(this.post);
-  }
-
-  getPhotoUrl(): PhotoUrl {
-    return this.post.photo ?? 'assets/png/no-photo.png';
   }
 
 }

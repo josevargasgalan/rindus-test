@@ -1,0 +1,24 @@
+.comment-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-body {
+  margin-bottom: 10px;
+}
+
+
+.mat-card-subtitle {
+  margin-bottom: inherit;
+}

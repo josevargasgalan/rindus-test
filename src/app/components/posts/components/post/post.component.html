@@ -16,9 +16,9 @@
         </button>
       </mat-menu>
     </mat-card-header>
-    <img mat-card-image [src]="getPhotoUrl()" alt="Post Photo">
-    <mat-card-content>
+    <mat-card-content class="card-content">
       <p>{{post.body}}</p>
     </mat-card-content>
+    <app-post-comments [postId]="post.id"></app-post-comments>
   </div>
 </mat-card>

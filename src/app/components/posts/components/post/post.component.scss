@@ -4,6 +4,7 @@
 
 .card-header {
   display: flex;
+  min-height: 100px;
 
   &--button {
     margin-left: auto;
@@ -12,4 +13,8 @@
   &--title {
     padding: 5px
   }
+}
+
+.card-content {
+  min-height: 100px;
 }

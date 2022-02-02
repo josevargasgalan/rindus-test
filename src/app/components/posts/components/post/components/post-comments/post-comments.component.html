@@ -1,0 +1,12 @@
+
+<ng-container *ngFor="let comment of comments">
+  <div class="comment-container">
+    <mat-card-header class="comment-header">
+      <div mat-card-avatar class="comment-image"></div>
+      <mat-card-subtitle>{{comment.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="comment-body">{{comment.body}}</div>
+  </div>
+</ng-container>
+
+
