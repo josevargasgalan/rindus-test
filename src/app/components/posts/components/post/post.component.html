@@ -1,16 +1,24 @@
 <mat-card class="card">
   <div class="card-container">
-    <mat-card-header>
-      <div mat-card-avatar class="header-image"></div>
-      <mat-card-title>{{post.title}}</mat-card-title>
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-header--title">{{post.title}}</mat-card-title>
+      <button class="card-header--button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Post menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onDelete()">
+          <mat-icon>delete</mat-icon>
+          <span>Delete Post</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>update</mat-icon>
+          <span>Update Post</span>
+        </button>
+      </mat-menu>
     </mat-card-header>
     <img mat-card-image [src]="getPhotoUrl()" alt="Post Photo">
     <mat-card-content>
       <p>{{post.body}}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="warn" (click)="onDelete()">{{'delete' | uppercase}}</button>
-      <button mat-button>{{'show comments '| uppercase}}</button>
-    </mat-card-actions>
   </div>
 </mat-card>

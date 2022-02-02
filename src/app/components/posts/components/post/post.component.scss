@@ -1,6 +1,15 @@
 .card {
   max-width: 400px;
 }
-.card-container {
-  padding: 10px;
+
+.card-header {
+  display: flex;
+
+  &--button {
+    margin-left: auto;
+  }
+
+  &--title {
+    padding: 5px
+  }
 }
