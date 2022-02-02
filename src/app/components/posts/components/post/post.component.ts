@@ -15,6 +15,7 @@ export class PostComponent implements OnInit {
   };
 
   @Output('onDelete') onDeleteEmmiter: EventEmitter<Post> = new EventEmitter();
+  @Output('onUpdate') onUpdateEmmiter: EventEmitter<Post> = new EventEmitter();
 
   constructor() { }
 
@@ -22,6 +23,10 @@ export class PostComponent implements OnInit {
 
   onDelete() {
     this.onDeleteEmmiter.emit(this.post);
+  }
+
+  onUpdate() {
+    this.onUpdateEmmiter.emit(this.post);
   }
 
 }

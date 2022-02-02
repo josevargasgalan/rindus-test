@@ -12,6 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { PostCommentsComponent } from './components/post/components/post-comments/post-comments.component';
 import { CommentsService } from './comments.service';
+import { AddPostComponentModule } from '../modals/add-post/add-post.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,16 @@ import { CommentsService } from './comments.service';
     PostComponent,
     PostCommentsComponent,
   ],
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule, MatMenuModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatMenuModule,
+    AddPostComponentModule
+  ],
   providers: [PostsService, ModalsService, CommentsService],
   exports: [PostsComponent]
 })

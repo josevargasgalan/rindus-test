@@ -12,5 +12,5 @@
         [mode]="spinnerConfig.mode"
         [value]="spinnerConfig.value">
       </mat-progress-spinner>
-      <app-post *ngFor="let post of posts" [post]="post" (onDelete)="onDeletePost($event)"></app-post>
+      <app-post *ngFor="let post of posts" [post]="post" (onDelete)="onDeletePost($event)" (onUpdate)="onUpdatePost($event)"></app-post>
 </div>

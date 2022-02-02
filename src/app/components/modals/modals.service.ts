@@ -9,7 +9,7 @@ export class ModalsService {
 
   constructor(private dialog: MatDialog) {}
 
-  openPostModal(): Observable<Post> {
-    return this.dialog.open(AddPostComponent).afterClosed()
+  openPostModal(data: any): Observable<Post> {
+    return this.dialog.open(AddPostComponent, { data }).afterClosed()
   }
 }

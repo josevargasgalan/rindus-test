@@ -1,1 +1,24 @@
-<p>add-post works!</p>
+<form class="form">
+  <h2>{{data.title}}</h2>
+  <mat-form-field  appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput [formControl]="titleFormControl" placeholder="My title">
+    <mat-error *ngIf="titleFormControl.hasError('minlength') && !titleFormControl.hasError('required')">
+      Minimum 8 characters required
+    </mat-error>
+    <mat-error *ngIf="titleFormControl.hasError('required')">
+      Title is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field  appearance="fill">
+    <mat-label>Post body</mat-label>
+    <input type="area" matInput [formControl]="bodyFormControl" placeholder="My post body">
+    <mat-error *ngIf="bodyFormControl.hasError('minlength') && !bodyFormControl.hasError('required')">
+      Minimum 25 characters required
+    </mat-error>
+    <mat-error *ngIf="bodyFormControl.hasError('required')">
+      Post body is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <button type="button" mat-raised-button color="accent" (click)="onAddPost()">Send</button>
+</form>

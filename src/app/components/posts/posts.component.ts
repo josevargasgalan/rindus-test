@@ -28,8 +28,23 @@ export class PostsComponent implements OnInit {
   }
 
   onAddPost() {
-    this.modalsService.openPostModal().subscribe(post => {
+    this.modalsService.openPostModal({title: 'Add new Post'}).subscribe((post: Post) => {
+      if(post) {
+        this.postsService.addPost(post).subscribe(res => {
+          this.posts.unshift(post);
+        });
+      }
+    })
+  }
 
+  onUpdatePost(post: Post) {
+    this.modalsService.openPostModal({title: 'Update Post', post}).subscribe((modalPost: Post) => {
+      if(post) {
+        this.postsService.updatePost(post).subscribe(res => {
+          const postId = this.posts.findIndex(filteredPost => filteredPost.id === post.id)
+          this.posts[postId] = modalPost;
+        });
+      }
     })
   }
 }

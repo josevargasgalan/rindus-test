@@ -15,4 +15,12 @@ export class PostsService {
   deletePost(post: Post): Observable<Post[]> {
     return this.apiSevice.delete(`posts/${post.id}`);
   }
+
+  addPost(post: Post): Observable<Post[]> {
+    return this.apiSevice.post(`posts`, post);
+  }
+
+  updatePost(post: Post): Observable<Post[]> {
+    return this.apiSevice.post(`posts`, post);
+  }
 }

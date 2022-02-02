@@ -12,15 +12,15 @@ export class ApiService {
     return this.httpService.get(`${this.baseUrl}/${url}`)
   }
 
-  post(url: string): Observable<any>{
-    return this.httpService.get(`${this.baseUrl}/${url}`)
+  post(url: string, body: any): Observable<any>{
+    return this.httpService.post(`${this.baseUrl}/${url}`, body)
   }
 
-  update(url: string): Observable<any>{
-    return this.httpService.get(`${this.baseUrl}/${url}`)
+  put(url: string, body: any): Observable<any>{
+    return this.httpService.put(`${this.baseUrl}/${url}`, body)
   }
 
   delete(url: string): Observable<any>{
-    return this.httpService.get(`${this.baseUrl}/${url}`)
+    return this.httpService.delete(`${this.baseUrl}/${url}`)
   }
 }
