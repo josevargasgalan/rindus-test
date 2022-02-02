@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalsService } from '../modals';
 import { Post, SpinnerConfig } from './models';
-import { PostsService } from './posts.service';
+import { PostsService } from './services';
 
 @Component({
   selector: 'app-posts',
@@ -39,7 +39,7 @@ export class PostsComponent implements OnInit {
 
   onUpdatePost(post: Post) {
     this.modalsService.openPostModal({title: 'Update Post', post}).subscribe((modalPost: Post) => {
-      if(post) {
+      if(modalPost) {
         this.postsService.updatePost(post).subscribe(res => {
           const postId = this.posts.findIndex(filteredPost => filteredPost.id === post.id)
           this.posts[postId] = modalPost;

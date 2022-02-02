@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PostComponent } from './components/post/post.component';
 import { PostsComponent } from './posts.component';
-import { PostsService } from './posts.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +10,7 @@ import { ModalsService } from '../modals';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { PostCommentsComponent } from './components/post/components/post-comments/post-comments.component';
-import { CommentsService } from './comments.service';
+import { PostsService,CommentsService } from './services';
 import { AddPostComponentModule } from '../modals/add-post/add-post.module';
 
 @NgModule({
