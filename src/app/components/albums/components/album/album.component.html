@@ -1,1 +1,9 @@
-<p>album works!</p>
+<mat-card class="card-container">
+  <mat-card-title-group>
+    <mat-card-title>User {{album.title}}</mat-card-title>
+    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+  </mat-card-title-group>
+  <mat-card-content>
+    This album is property of {{album.userId}}
+  </mat-card-content>
+</mat-card>

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
+import { SpinnerConfig } from 'src/app/models';
 import { ModalsService } from '../modals';
-import { Post, SpinnerConfig } from './models';
+import { Post } from './models';
 import { PostsService } from './services';
 
 @Component({

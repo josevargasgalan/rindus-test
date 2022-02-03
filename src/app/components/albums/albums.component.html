@@ -1,1 +1,9 @@
-<p>albums works!</p>
+<div class="album-container">
+  <mat-progress-spinner
+    *ngIf="albums.length === 0"
+    [color]="spinnerConfig.color"
+    [mode]="spinnerConfig.mode"
+    [value]="spinnerConfig.value">
+  </mat-progress-spinner>
+  <app-album *ngFor="let album of albums" [album]="album"></app-album>
+</div>
