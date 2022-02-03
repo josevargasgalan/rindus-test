@@ -15,6 +15,14 @@ import { AddPostComponentModule } from '../modals/add-post/add-post.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+    {
+      path: '',
+      component: PostsComponent
+    },
+]
 
 @NgModule({
   declarations: [
@@ -34,6 +42,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    RouterModule.forChild(routes)
   ],
   providers: [PostsService, ModalsService, CommentsService],
   exports: [PostsComponent]
