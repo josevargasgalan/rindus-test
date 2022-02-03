@@ -16,6 +16,20 @@ app-post {
 
 .posts-header {
   display: flex;
-  justify-content: flex-end;
-  padding: 20px
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 20px;
+
+  &--search {
+      display: flex;
+      align-items: center;
+  }
+
+::ng-deep {
+  mat-form-field {
+    .mat-form-field-wrapper {
+      padding-bottom: inherit;
+      }
+    }
+  }
 }

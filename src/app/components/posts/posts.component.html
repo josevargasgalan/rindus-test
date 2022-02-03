@@ -1,8 +1,14 @@
 
 <div class="posts-header">
-  <button mat-fab color="accent" (click)="onAddPost()" aria-label="Example icon button with a delete icon">
+  <mat-form-field  appearance="outline" class="posts-header--search">
+    <mat-label>Search post by title</mat-label>
+    <input matInput [formControl]="searchPostFormControl" placeholder="Your search...">
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-hint>Search your posts</mat-hint>
+  </mat-form-field>
+  <button class="posts-header--add-button" mat-fab color="accent" (click)="onAddPost()" aria-label="Example icon button with a delete icon">
     <mat-icon>add</mat-icon>
-    </button>
+  </button>
 </div>
 
 <div class="posts-container">

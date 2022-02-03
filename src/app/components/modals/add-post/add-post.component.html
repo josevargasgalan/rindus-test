@@ -12,7 +12,7 @@
   </mat-form-field>
   <mat-form-field  appearance="fill">
     <mat-label>Post body</mat-label>
-    <input type="area" matInput [formControl]="bodyFormControl" placeholder="My post body">
+    <textarea  matInput [formControl]="bodyFormControl" placeholder="My post body"></textarea>
     <mat-error *ngIf="bodyFormControl.hasError('minlength') && !bodyFormControl.hasError('required')">
       Minimum 25 characters required
     </mat-error>

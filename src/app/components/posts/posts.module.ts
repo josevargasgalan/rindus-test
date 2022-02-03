@@ -12,6 +12,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { PostCommentsComponent } from './components/post/components/post-comments/post-comments.component';
 import { PostsService,CommentsService } from './services';
 import { AddPostComponentModule } from '../modals/add-post/add-post.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { AddPostComponentModule } from '../modals/add-post/add-post.module';
     MatProgressSpinnerModule,
     MatDialogModule,
     MatMenuModule,
-    AddPostComponentModule
+    AddPostComponentModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [PostsService, ModalsService, CommentsService],
   exports: [PostsComponent]
